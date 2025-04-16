@@ -1,0 +1,106 @@
+object Form1: TForm1
+  Left = 1758
+  Height = 929
+  Top = 447
+  Width = 1065
+  Caption = 'Form1'
+  ClientHeight = 929
+  ClientWidth = 1065
+  DesignTimePPI = 168
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnResize = FormResize
+  LCLVersion = '3.8.0.0'
+  object panelPool: TPanel
+    Left = 6
+    Height = 712
+    Top = 8
+    Width = 554
+    Anchors = [akTop, akLeft, akBottom]
+    Caption = 'panelPool'
+    TabOrder = 0
+  end
+  object panelGraph: TPanel
+    Left = 584
+    Height = 712
+    Top = 8
+    Width = 472
+    Anchors = [akTop, akRight, akBottom]
+    Caption = 'panelGraph'
+    TabOrder = 1
+  end
+  object controlPanel: TPanel
+    Left = -2
+    Height = 192
+    Top = 720
+    Width = 1066
+    Anchors = [akLeft, akRight, akBottom]
+    ClientHeight = 192
+    ClientWidth = 1066
+    TabOrder = 2
+    object btnReset: TButton
+      Left = 901
+      Height = 44
+      Top = 136
+      Width = 131
+      Caption = 'Сброс'
+      TabOrder = 0
+      OnClick = btnResetClick
+    end
+    object btnStart: TButton
+      Left = 16
+      Height = 44
+      Top = 136
+      Width = 131
+      Caption = 'btnStart'
+      TabOrder = 1
+      OnClick = btnStartClick
+    end
+    object tbInflowRate: TTrackBar
+      Left = 8
+      Height = 44
+      Top = 64
+      Width = 448
+      Position = 0
+      TabOrder = 2
+    end
+    object tbOutFlowRate: TTrackBar
+      Left = 584
+      Height = 44
+      Top = 64
+      Width = 448
+      Max = 9
+      OnChange = tbOutFlowRateChange
+      Position = 0
+      TabOrder = 3
+    end
+    object chkPIDEnabled: TCheckBox
+      Left = 168
+      Height = 34
+      Top = 136
+      Width = 167
+      Caption = 'chkPIDEnabled'
+      TabOrder = 4
+    end
+    object lbInFlow: TLabel
+      Left = 16
+      Height = 30
+      Top = 16
+      Width = 178
+      Caption = 'Труба наполнения'
+    end
+    object lbOutFlow: TLabel
+      Left = 592
+      Height = 30
+      Top = 16
+      Width = 117
+      Caption = 'Труба слива'
+    end
+  end
+  object StatusTimer: TTimer
+    Enabled = False
+    OnTimer = StatusTimerTimer
+    Left = 504
+    Top = 808
+  end
+end
